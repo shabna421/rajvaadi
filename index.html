@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Baker's Dozen - Our Squad</title>
+    <style>
+        /* --- CSS STYLING --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0f0f1a;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1528, #3b2d54);
+            padding: 30px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            color: #ff007f;
+            text-shadow: 0 0 10px rgba(255,0,127,0.5);
+        }
+
+        header p {
+            margin: 10px 0 0 0;
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+
+        /* Slideshow Container */
+        .slideshow-container {
+            max-width: 800px;
+            height: 400px;
+            position: relative;
+            margin: 30px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+            border: 4px solid #3b2d54;
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Main Section Title */
+        .section-title {
+            margin-top: 50px;
+            font-size: 2rem;
+            color: #00e5ff;
+        }
+
+        /* Friends Grid */
+        .friends-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            padding: 30px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Friend Card */
+        .friend-card {
+            background-color: #1a1a2e;
+            border-radius: 15px;
+            padding: 20px;
+            width: 220px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border: 1px solid #252542;
+        }
+
+        .friend-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 229, 255, 0.3);
+            border-color: #00e5ff;
+        }
+
+        .friend-card img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ff007f;
+        }
+
+        .friend-card h3 {
+            margin: 15px 0 5px 0;
+            font-size: 1.3rem;
+            color: #ffffff;
+        }
+
+        .friend-card p {
+            margin: 0;
+            color: #00e5ff;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* Modal (Pop-up) Styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 10; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.85);
+            backdrop-filter: blur(8px);
+        }
+
+        .modal-content {
+            background-color: #16162a;
+            margin: 12% auto; 
+            padding: 30px;
+            border-radius: 20px;
+            width: 85%;
+            max-width: 450px;
+            text-align: left;
+            box-shadow: 0 5px 25px rgba(0, 229, 255, 0.2);
+            position: relative;
+            border: 2px solid #3b2d54;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: #ff007f;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .close-btn:hover {
+            color: #fff;
+        }
+
+        .modal-role {
+            color: #ff007f;
+            font-weight: bold;
+            margin-top: 5px;
+            font-size: 1.1rem;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, #ff007f, #00e5ff);
+            margin: 15px 0;
+        }
+
+        .modal-desc {
+            line-height: 1.6;
+            color: #e0e0e0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Our Squad ❤️</h1>
+        <p>13 Hearts, 1 Awesome Bond!</p>
+    </header>
+
+    <!-- Automatic Slideshow (Group Photos) -->
+    <div class="slideshow-container">
+        <!-- ഗ്രൂപ്പ് ഫോട്ടോകളുടെ ലിങ്ക് താഴെ നൽകാം (ഇപ്പൊൾ ഡമ്മി ഇമേജ് ആണ്) -->
+        <div class="mySlides">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800" alt="Group Photo 1">
+        </div>
+        <div class="mySlides">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800" alt="Group Photo 2">
+        </div>
+        <div class="mySlides">
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800" alt="Group Photo 3">
+        </div>
+    </div>
+
+    <h2 class="section-title">Meet the Gang ⚡</h2>
+
+    <!-- Friends Grid Section (13 Members) -->
+    <main class="friends-container">
+        
+        <!-- Member 1 -->
+        <div class="friend-card" onclick="openModal('m1')">
+            <img src="https://via.placeholder.com/150" alt="Member 1">
+            <h3>Friend 1</h3>
+            <p>The Leader</p>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="friend-card" onclick="openModal('m2')">
+            <img src="https://via.placeholder.com/150" alt="Member 2">
+            <h3>Friend 2</h3>
+            <p>The Comedian</p>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="friend-card" onclick="openModal('m3')">
+            <img src="https://via.placeholder.com/150" alt="Member 3">
+            <h3>Friend 3</h3>
+            <p>The Silent One</p>
+        </div>
+
+        <!-- Member 4 -->
+        <div class="friend-card" onclick="openModal('m4')">
+            <img src="https://via.placeholder.com/150" alt="Member 4">
+            <h3>Friend 4</h3>
+            <p>The Techie</p>
+        </div>
+
+        <!-- Member 5 -->
+        <div class="friend-card" onclick="openModal('m5')">
+            <img src="https://via.placeholder.com/150" alt="Member 5">
+            <h3>Friend 5</h3>
+            <p>The Foodie</p>
+        </div>
+
+        <!-- Member 6 -->
+        <div class="friend-card" onclick="openModal('m6')">
+            <img src="https://via.placeholder.com/150" alt="Member 6">
+            <h3>Friend 6</h3>
+            <p>The Singer</p>
+        </div>
+
+        <!-- Member 7 -->
+        <div class="friend-card" onclick="openModal('m7')">
+            <img src="https://via.placeholder.com/150" alt="Member 7">
+            <h3>Friend 7</h3>
+            <p>The Gamer</p>
+        </div>
+
+        <!-- Member 8 -->
+        <div class="friend-card" onclick="openModal('m8')">
+            <img src="https://via.placeholder.com/150" alt="Member 8">
+            <h3>Friend 8</h3>
+            <p>The Photographer</p>
+        </div>
+
+        <!-- Member 9 -->
+        <div class="friend-card" onclick="openModal('m9')">
+            <img src="https://via.placeholder.com/150" alt="Member 9">
+            <h3>Friend 9</h3>
+            <p>The Sleepy Head</p>
+        </div>
+
+        <!-- Member 10 -->
+        <div class="friend-card" onclick="openModal('m10')">
+            <img src="https://via.placeholder.com/150" alt="Member 10">
+            <h3>Friend 10</h3>
+            <p>The Helper</p>
+        </div>
+
+        <!-- Member 11 -->
+        <div class="friend-card" onclick="openModal('m11')">
+            <img src="https://via.placeholder.com/150" alt="Member 11">
+            <h3>Friend 11</h3>
+            <p>The Explorer</p>
+        </div>
+
+        <!-- Member 12 -->
+        <div class="friend-card" onclick="openModal('m12')">
+            <img src="https://via.placeholder.com/150" alt="Member 12">
+            <h3>Friend 12</h3>
+            <p>The Dynamic</p>
+        </div>
+
+        <!-- Member 13 -->
+        <div class="friend-card" onclick="openModal('m13')">
+            <img src="https://via.placeholder.com/150" alt="Member 13">
+            <h3>Friend 13</h3>
+            <p>The Innocent</p>
+        </div>
+
+    </main>
+
+    <!-- Pop-up (Modal) Section -->
+    <div id="identityModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modal-name">Friend Name</h2>
+            <p id="modal-role" class="modal-role"></p>
+            <hr>
+            <p id="modal-desc" class="modal-desc">Details go here...</p>
+        </div>
+    </div>
+
+    <!-- --- JAVASCRIPT --- -->
+    <script>
+        // 1. Automatic Slideshow Script
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000); // ഓരോ 3 സെക്കൻഡിലും ഫോട്ടോ മാറും
+        }
+
+        // 2. Friends Data (13 പേരുടെയും വിവരങ്ങൾ ഇവിടെ മാറ്റാം)
+        const friendsData = {
+            m1: { name: "പേര് 1", role: "Role/NickName", desc: "ഇയാളെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഇവിടെ എഴുതാം..." },
+            m2: { name: "പേര് 2", role: "Role/NickName", desc: "ഇയാളെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഇവിടെ എഴുതാം..." },
+            m3: { name: "പേര് 3", role: "Role/NickName", desc: "ഇയാളെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഇവിടെ എഴുതാം..." },
+            m4: { name: "പേര് 4", role: "Role/NickName", desc: "ഇയാളെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഇവിടെ എഴുതാം..." },
+            m5: { name: "പേര് 5", role: "Role/NickName", desc: "ഇയാളെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഇവിടെ എഴുതാം..." },
+            m6: { name: "പേര് 6", role: "Role/NickName", desc: "ഇയാളെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഇവിടെ എഴുതാം..." },
+            m7: { name: "പേര് 7", role: "Role/NickName", desc: "ഇയാളെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഇവിടെ എഴുതാം..." },
+            m8: { name: "പേര് 8", role: "Role/NickName", desc: "ഇയാളെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഇവിടെ എഴുതാം..." },
+            m9: { name: "പേര് 9", role: "Role/NickName", desc: "ഇയാളെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഇവിടെ എഴുതാം..." },
+            m10: { name: "പേര് 10", role: "Role/NickName", desc: "ഇയാളെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഇവിടെ എഴുതാം..." },
+            m11: { name: "പേര് 11", role: "Role/NickName", desc: "ഇയാളെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഇവിടെ എഴുതാം..." },
+            m12: { name: "പേര് 12", role: "Role/NickName", desc: "ഇയാളെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഇവിടെ എഴുതാം..." },
+            m13: { name: "പേര് 13", role: "Role/NickName", desc: "ഇയാളെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഇവിടെ എഴുതാം..." }
+        };
+
+        // 3. Modal Popup Functions
+        function openModal(memberId) {
+            const modal = document.getElementById("identityModal");
+            const member = friendsData[memberId];
+
+            if (member) {
+                document.getElementById("modal-name").innerText = member.name;
+                document.getElementById("modal-role").innerText = member.role;
+                document.getElementById("modal-desc").innerText = member.desc;
+                modal.style.display = "block";
+            }
+        }
+
+        function closeModal() {
+            document.getElementById("identityModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById("identityModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
