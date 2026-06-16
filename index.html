@@ -186,15 +186,12 @@
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
         <h1>Our Squad ❤️</h1>
         <p>13 Hearts, 1 Awesome Bond!</p>
     </header>
 
-    <!-- Automatic Slideshow (Group Photos) -->
     <div class="slideshow-container">
-        <!-- ഗ്രൂപ്പ് ഫോട്ടോകളുടെ ലിങ്ക് താഴെ നൽകാം (ഇപ്പൊൾ ഡമ്മി ഇമേജ് ആണ്) -->
         <div class="mySlides">
             <img src="grp1.jpg" alt="Group Photo 1">
         </div>
@@ -203,120 +200,101 @@
         </div>
         <div class="mySlides">
             <img src="grp3.jpg" alt="Group Photo 3">
-        </div
-        <div class="mySlides">
-            <img src="grp3.jpg" alt="Group Photo 4">
+        </div> <div class="mySlides">
+            <img src="grp4.jpg" alt="Group Photo 4">
         </div>
         <div class="mySlides">
-            <img src="grp4.jpg" alt="Group Photo 5">
+            <img src="grp5.jpg" alt="Group Photo 5">
         </div>
         <div class="mySlides">
-            <img src="grp5.jpg" alt="Group Photo 6">
+            <img src="grp6.jpg" alt="Group Photo 6">
         </div>
         <div class="mySlides">
-            <img src="grp6.jpg" alt="Group Photo 7">
+            <img src="grp7.jpg" alt="Group Photo 7">
         </div>
         <div class="mySlides">
-            <img src="grp7.jpg" alt="Group Photo 8">
+            <img src="grp8.jpg" alt="Group Photo 8">
         </div>
         <div class="mySlides">
-            <img src="grp8.jpg" alt="Group Photo 9">
-        </div>
-        <div class="mySlides">
-            <img src="grp 9.jpg" alt="Group Photo 2">
-        </div>
+            <img src="grp 9.jpg" alt="Group Photo 9"> </div>
     </div>
 
     <h2 class="section-title">Meet the Gang ⚡</h2>
 
-    <!-- Friends Grid Section (13 Members) -->
     <main class="friends-container">
         
-        <!-- Member 1 -->
         <div class="friend-card" onclick="openModal('m1')">
             <img src="https://via.placeholder.com/150" alt="Member 1">
             <h3>Friend 1</h3>
             <p>The Leader</p>
         </div>
 
-        <!-- Member 2 -->
         <div class="friend-card" onclick="openModal('m2')">
             <img src="https://via.placeholder.com/150" alt="Member 2">
             <h3>Friend 2</h3>
             <p>The Comedian</p>
         </div>
 
-        <!-- Member 3 -->
         <div class="friend-card" onclick="openModal('m3')">
             <img src="https://via.placeholder.com/150" alt="Member 3">
             <h3>Friend 3</h3>
             <p>The Silent One</p>
         </div>
 
-        <!-- Member 4 -->
         <div class="friend-card" onclick="openModal('m4')">
             <img src="https://via.placeholder.com/150" alt="Member 4">
             <h3>Friend 4</h3>
             <p>The Techie</p>
         </div>
 
-        <!-- Member 5 -->
         <div class="friend-card" onclick="openModal('m5')">
             <img src="https://via.placeholder.com/150" alt="Member 5">
             <h3>Friend 5</h3>
             <p>The Foodie</p>
         </div>
 
-        <!-- Member 6 -->
         <div class="friend-card" onclick="openModal('m6')">
             <img src="https://via.placeholder.com/150" alt="Member 6">
             <h3>Friend 6</h3>
             <p>The Singer</p>
         </div>
 
-        <!-- Member 7 -->
         <div class="friend-card" onclick="openModal('m7')">
             <img src="https://via.placeholder.com/150" alt="Member 7">
             <h3>Friend 7</h3>
             <p>The Gamer</p>
         </div>
 
-        <!-- Member 8 -->
         <div class="friend-card" onclick="openModal('m8')">
             <img src="https://via.placeholder.com/150" alt="Member 8">
             <h3>Friend 8</h3>
             <p>The Photographer</p>
         </div>
 
-        <!-- Member 9 -->
         <div class="friend-card" onclick="openModal('m9')">
             <img src="https://via.placeholder.com/150" alt="Member 9">
             <h3>Friend 9</h3>
             <p>The Sleepy Head</p>
         </div>
 
-        <!-- Member 10 -->
         <div class="friend-card" onclick="openModal('m10')">
             <img src="https://via.placeholder.com/150" alt="Member 10">
             <h3>Friend 10</h3>
             <p>The Helper</p>
         </div>
 
-        <!-- Member 11 -->
         <div class="friend-card" onclick="openModal('m11')">
             <img src="https://via.placeholder.com/150" alt="Member 11">
             <h3>Friend 11</h3>
             <p>The Explorer</p>
         </div>
 
-        <!-- Member 12 -->
         <div class="friend-card" onclick="openModal('m12')">
             <img src="https://via.placeholder.com/150" alt="Member 12">
             <h3>Friend 12</h3>
             <p>The Dynamic</p>
         </div>
 
-        <!-- Member 13 -->
         <div class="friend-card" onclick="openModal('m13')">
             <img src="https://via.placeholder.com/150" alt="Member 13">
             <h3>Friend 13</h3>
@@ -325,7 +303,6 @@
 
     </main>
 
-    <!-- Pop-up (Modal) Section -->
     <div id="identityModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -336,7 +313,6 @@
         </div>
     </div>
 
-    <!-- --- JAVASCRIPT --- -->
     <script>
         // 1. Automatic Slideshow Script
         let slideIndex = 0;
@@ -351,10 +327,10 @@
             slideIndex++;
             if (slideIndex > slides.length) {slideIndex = 1}    
             slides[slideIndex-1].style.display = "block";  
-            setTimeout(showSlides, 1500); // ഓരോ 3 സെക്കൻഡിലും ഫോട്ടോ മാറും
+            setTimeout(showSlides, 1500); // ഇപ്പോൾ കറക്റ്റ് 1.5 സെക്കൻഡിൽ മാറും
         }
 
-        // 2. Friends Data (13 പേരുടെയും വിവരങ്ങൾ ഇവിടെ മാറ്റാം)
+        // 2. Friends Data
         const friendsData = {
             m1: { name: "പേര് 1", role: "Role/NickName", desc: "ഇയാളെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഇവിടെ എഴുതാം..." },
             m2: { name: "പേര് 2", role: "Role/NickName", desc: "ഇയാളെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഇവിടെ എഴുതാം..." },
